@@ -1,0 +1,231 @@
+/*
+* @Author: Administrator
+* @Date:   2017-06-22 17:54:14
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-06-22 18:12:01
+*/
+        #game {
+            display: none;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-color: #9DA5C3;
+            opacity: 0.5;
+            z-index: 2;
+        }
+        .scoreShow:nth-child(1){
+            width: 185px;
+            height: 39px;
+            color: #fff168;
+            border :5px solid #4e82ea;
+            -webkit-border-radius: 5%;
+               -moz-border-radius: 5%;
+                    border-radius: 5%;;
+            font-size: 25px;
+            line-height: 39px;
+        }
+        .clear:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .scoreShow {
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .model {
+            text-decoration: none;
+            color: white;
+            background-color: #a6a6bb;
+            font-size: 36px;
+            -webkit-border-radius: 10px;
+               -moz-border-radius: 10px;
+                    border-radius: 10px;
+        }
+
+        .head {
+            width: 480px;
+            height: 50px;
+            margin: 0 auto;
+            font-size: 25px;
+        }
+
+        #gridPanel {
+            width: 480px;
+            height: 480px;
+            margin: 0 auto;
+            background-color: #4e82ea;
+            -webkit-border-radius: 10px;
+               -moz-border-radius: 10px;
+                    border-radius: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .grid,
+        .cell {
+            width: 100px;
+            height: 100px;
+            -webkit-border-radius: 6px;
+               -moz-border-radius: 6px;
+                    border-radius: 6px;
+        }
+
+        .grid {
+            background-color: #91a5cc;
+            float: left;
+            margin: 16px 0 0 16px;
+        }
+
+        .cell {
+            position: absolute;
+            font-size: 60px;
+            text-align: center;
+            line-height: 100px;
+            color: red;
+        }
+
+        .n2 {
+            background: url(../images/z2.jpg) no-repeat center center ;
+            -webkit-background-size:100% 100% ;
+               -moz-background-size:100% 100% ;
+                 -o-background-size:100% 100% ;
+                    background-size:100% 100% ;
+        }
+
+        .n4 {
+            background: url(../images/z4.jpg)  no-repeat center center ;
+            -webkit-background-size:100% 100% ;
+               -moz-background-size:100% 100% ;
+                 -o-background-size:100% 100% ;
+                    background-size:100% 100% ;
+        }
+
+        .n8 {
+            background: url(../images/z8.jpg)  no-repeat center center ;
+            -webkit-background-size:100% 100% ;
+               -moz-background-size:100% 100% ;
+                 -o-background-size:100% 100% ;
+                    background-size:100% 100% ;
+        }
+
+        .n16 {
+            background: url(../images/z16.jpg)  no-repeat center center ;
+            -webkit-background-size:100% 100% ;
+               -moz-background-size:100% 100% ;
+                 -o-background-size:100% 100% ;
+                    background-size:100% 100% ;
+        }
+
+        .n32 {
+            background: url(../images/z32.jpg)  no-repeat center center ;
+            -webkit-background-size:100% 100% ;
+               -moz-background-size:100% 100% ;
+                 -o-background-size:100% 100% ;
+                    background-size:100% 100% ;
+        }
+
+        .n64 {
+            background: url(../images/z64.jpg)  no-repeat center center ;
+            -webkit-background-size:100% 100% ;
+               -moz-background-size:100% 100% ;
+                 -o-background-size:100% 100% ;
+                    background-size:100% 100% ;
+        }
+
+        .n128 {
+            background: url(../images/z128.jpg)  no-repeat center center ;
+            -webkit-background-size:100% 100% ;
+               -moz-background-size:100% 100% ;
+                 -o-background-size:100% 100% ;
+                    background-size:100% 100% ;
+        }
+
+        .n256 {
+            background: url(../images/z256.jpg)  no-repeat center center ;
+            -webkit-background-size:100% 100% ;
+               -moz-background-size:100% 100% ;
+                 -o-background-size:100% 100% ;
+                    background-size:100% 100% ;
+        }
+
+        .n512 {
+            background: url(../images/z512.jpg)  no-repeat center center ;
+            -webkit-background-size:100% 100% ;
+               -moz-background-size:100% 100% ;
+                 -o-background-size:100% 100% ;
+                    background-size:100% 100% ;
+        }
+
+        .n1024 {
+            background: url(../images/z1024.jpg)  no-repeat center center ;
+            -webkit-background-size:100% 100% ;
+               -moz-background-size:100% 100% ;
+                 -o-background-size:100% 100% ;
+                    background-size:100% 100% ;
+        }
+
+        .n2048 {
+            background: url(../images/z2048.jpg)  no-repeat center center ;
+            -webkit-background-size:100% 100% ;
+               -moz-background-size:100% 100% ;
+                 -o-background-size:100% 100% ;
+                    background-size:100% 100% ;
+        }
+
+        .n4096 {
+            background-color: #a6c
+        }
+
+        .n8192 {
+            background-color: #93c
+        }
+
+        .n2,
+        .n4 {
+            color: yellow;
+        }
+
+        #gameover {
+
+            display: none;
+            position: fixed;
+            left: 50%;
+            right: 50%;
+            top: 148px;
+            width: 220px;
+            height: 200px;
+            -webkit-border-radius: 10px;
+               -moz-border-radius: 10px;
+                    border-radius: 10px;
+            background-color: white;
+            margin-left: -110px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        #gameover>a {
+            display: inline-block;
+            width: 170px;
+            height: 50px;
+            -webkit-border-radius: 10px;
+               -moz-border-radius: 10px;
+                    border-radius: 10px;
+            text-decoration: none;
+            background-color: #9F8D77;
+            color: white;
+            font-size: 36px;
+        }
