@@ -2,11 +2,11 @@
 * @Author: Administrator
 * @Date:   2017-06-22 17:55:08
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-06-22 18:08:28
+* @Last Modified time: 2017-06-24 21:15:53
 */
 
-;(function() {
-    var arr = [];
+'use strict';
+ var arr = [];
 
     function $(id) {
         return document.getElementById(id);
@@ -170,8 +170,8 @@
         //更新页面
         updateView: function() {
             var win = 0;
-            for (r = 0; r < obj.ROW; r++) {
-                for (c = 0; c < obj.CELL; c++) {
+            for (var r = 0; r < obj.ROW; r++) {
+                for (var c = 0; c < obj.CELL; c++) {
                     if (arr[r][c] == 0) { //值为0的不显示
                         $("c" + r + c).innerHTML = ""; //0不显示
                         $("c" + r + c).className = "cell" //清除样式
@@ -204,8 +204,8 @@
         },
         //游戏失败
         isGameOver: function() {
-            for (r = 0; r < obj.ROW; r++) {
-                for (c = 0; c < obj.CELL; c++) {
+            for (var r = 0; r < obj.ROW; r++) {
+                for (var c = 0; c < obj.CELL; c++) {
                     if (arr[r][c] == 0) { //有0还不是gameover
                         return false;
                     } else if (c != obj.CELL - 1 && arr[r][c] == arr[r][c + 1]) { //左往右  前一个和下一个不相等
@@ -254,7 +254,7 @@
         //左按键的处理
         dealToLeft: function(r) {
             var next;
-            for (c = 0; c < obj.ROW; c++) {
+            for (var c = 0; c < obj.ROW; c++) {
                 next = obj.find(r, c, c + 1, obj.CELL, 1); //找出第一个不为0的位置
                 if (next == null) break; //没有找到就返回
                 //如果当前位置为0
@@ -282,7 +282,7 @@
         },
         moveLeft: function() {
             obj.move(function() {
-                for (r = 0; r < obj.ROW; r++) {
+                for (var r = 0; r < obj.ROW; r++) {
                     obj.dealToLeft(r);
                 }
             })
@@ -298,7 +298,7 @@
         //右按键处理
         dealToRight: function(r) {
             var next;
-            for (c = obj.CELL - 1; c >= 0; c--) {
+            for (var c = obj.CELL - 1; c >= 0; c--) {
                 next = obj.find(r, c, c - 1, 0, -1); //找出第一个不为0的位置
                 if (next == null) break; //没有找到就返回
                 //如果当前位置为0
@@ -315,7 +315,7 @@
         },
         moveRight: function() {
             obj.move(function() {
-                for (r = 0; r < obj.ROW; r++) {
+                for (var r = 0; r < obj.ROW; r++) {
                     obj.dealToRight(r);
                 }
             })
@@ -323,7 +323,7 @@
         //上按键处理
         dealToUp: function(c) {
             var next;
-            for (r = 0; r < obj.ROW; r++) {
+            for (var r = 0; r < obj.ROW; r++) {
                 next = obj.find(r, c, r + 1, obj.ROW, 1); //找出第一个不为0的位置
                 if (next == null) break;
                 //如果当前位置为0
@@ -340,7 +340,7 @@
         },
         moveUp: function() {
             obj.move(function() {
-                for (c = 0; c < obj.CELL; c++) {
+                for (var c = 0; c < obj.CELL; c++) {
                     obj.dealToUp(c);
                 }
             })
@@ -348,7 +348,7 @@
         //下按键处理
         dealToDown: function(c) {
             var next;
-            for (r = obj.ROW - 1; r >= 0; r--) {
+            for (var r = obj.ROW - 1; r >= 0; r--) {
                 next = obj.find(r, c, r - 1, 0, -1); //找出第一个不为0的位置
                 if (next == null) {
                     break;
@@ -367,7 +367,7 @@
         },
         moveDown: function() {
             obj.move(function() {
-                for (c = 0; c < obj.CELL; c++) {
+                for (var c = 0; c < obj.CELL; c++) {
                     obj.dealToDown(c);
                 }
             })
@@ -396,7 +396,7 @@
             obj.gameStart();
         }
     }
-}())
+
     //   var modelValue = parseInt($("model").value);
     //   if (isNaN(modelValue)) {
     //     modelValue = 4; //默认是4*4
